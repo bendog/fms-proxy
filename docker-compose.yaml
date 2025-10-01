@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+    container_name: "fms-proxy"
+    env_file:
+      - .env
+    # Traefik settings
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fms-proxy.rule=Host(`${HOSTNAME}`)"
+      - traefik.http.routers.fms-proxy.tls=true
+      - traefik.http.routers.fms-proxy.tls.certresolver=lets-encrypt
+      - traefik.port=8000
+    restart: unless-stopped
+
+networks:
+  web:
+    external: true
+    name: web

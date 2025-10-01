@@ -24,6 +24,8 @@ WORKDIR /app
 RUN ls
 
 RUN pip install *.whl
+
+ENV OUTLOOK_PATH_MUST_CONTAIN="owa/calendar/"
 EXPOSE 8000
 
 ADD ./entrypoint.sh /entrypoint.sh
