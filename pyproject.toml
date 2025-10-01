@@ -8,7 +8,11 @@ version = "0.1.0"
 description = "A proxy for outlook ICS files because MS are really annoying."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.112.0",
+    "httpx>=0.28.1",
+    "uvicorn[standard]>=0.30.0",
+]
 
 
 # RUFF settings

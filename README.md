@@ -9,14 +9,14 @@ To deal with this i'm going to have to write myself a proxy service which will t
 
 ## Usage
 
-take your ICal subscription address URL and remove the `https://`
+take your ICal subscription address URL and remove the `https://outlook.office365.com/`
 
 example:
 `https://outlook.office365.com/owa/calendar/12341234123412341234123412341234@outlook.com/1234123412341234123412341234123412341234123412341234/calendar.ics`
 
 becomes
-`outlook.office365.com/owa/calendar/12341234123412341234123412341234@outlook.com/1234123412341234123412341234123412341234123412341234/calendar.ics`
+`owa/calendar/12341234123412341234123412341234@outlook.com/1234123412341234123412341234123412341234123412341234/calendar.ics`
 
 then pass that to this servers `/outlook/` endpoint as below. 
 
-http://127.0.0.1:8000/outlook/outlook.office365.com/owa/calendar/12341234123412341234123412341234@outlook.com/1234123412341234123412341234123412341234123412341234/calendar.ics
+http://127.0.0.1:8000/outlook/owa/calendar/12341234123412341234123412341234@outlook.com/1234123412341234123412341234123412341234123412341234/calendar.ics
