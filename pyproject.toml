@@ -7,6 +7,11 @@ name = "fms-proxy"
 version = "0.1.0"
 description = "A proxy for outlook ICS files because MS are really annoying."
 readme = "README.md"
+license = "LGPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+authors = [
+    {name = "Ben Fitzhardinge", email = "ben@benjamin.dog"},
+]
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.112.0",
@@ -14,6 +19,9 @@ dependencies = [
     "uvicorn[standard]>=0.30.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/bendog/fms-proxy"
+Repository = "https://github.com/bendog/fms-proxy"
 
 # RUFF settings
 [tool.ruff]
